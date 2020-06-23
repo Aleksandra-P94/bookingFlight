@@ -1,0 +1,167 @@
+$shadow: 3px 3px rgb(40, 99, 126);
+$shadow2: 2px 2px rgba(40, 99, 126, 0.692);
+$navcolor: rgb(46, 94, 197);
+$secondBgColor: rgba(177, 183, 238, 0.63);
+
+.navcolor{
+    background-color: $navcolor;
+}
+nav{left: 20%!important;}
+
+
+
+img{
+    width: 100%;
+    height: 50vw;
+    size: 70%;
+}
+
+/*Main*/
+.mainPhoto{
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+background-size: 100%;
+width: max-content;
+height: max-content;
+}
+.bgImg{
+    position: fixed;
+    opacity: 0.3;
+}
+.mainAside{
+    padding: 5px;
+    height: 100%;
+    background-color: $secondBgColor;
+    box-shadow: $shadow;
+    border: 2px solid white;
+    position: absolute;
+    left: 0;
+    right: 80%;
+    text-align: center;
+}
+
+.nav1, .nav2, .nav3, .nav4, .nav5{
+    width: 100%!important;
+    margin-top: 15px;
+    text-align: center;
+    background-color:$navcolor!important;
+}
+.navbar-brand{
+    margin-bottom: 30px;
+}
+#chooseYourFlight{
+    margin: 7vw 25vw;
+    display: block;
+    position: absolute;
+    color: $navcolor;
+        p{
+            opacity: 0.4;
+        }
+}
+table{
+    text-align: initial;
+    height: 100px;
+    display: block;
+position: absolute;
+width: 70vw;
+    }
+    thead{
+        text-align: center;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-style: solid;
+        border-color:$navcolor;;
+        border-width: 1px;
+        background-color: $secondBgColor;
+        font-variant-caps: petite-caps;
+        }
+    tbody{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    border-style: solid;
+    border-color: $navcolor;
+    border-width: 1px;
+    border-top: none;
+    margin-top: 0;
+    overflow: auto;
+    height: 100px;
+    scrollbar-width: thin;
+    scrollbar-color: rgb(167, 230, 214);
+    scrollbar-track-color: wheat;
+    scrollbar-width: 8px;
+    color: $navcolor;
+    }
+    
+    .tytul{
+    text-align: center;
+    padding: 20px;
+    color: white;
+    }
+    .tabela2{
+    text-align: center;
+    
+    }
+    th{
+    padding: 10px;
+    color: $navcolor;
+    }
+    td {
+    width: 70px;
+    }
+    
+    tr{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    border-style: solid;
+    border-left: none;
+    border-right: none;
+    border-color:$navcolor;
+    border-width: inherit;
+    }
+    tr.trBody:hover{
+        background-color: rgba(190, 188, 188, 0.637);
+    }
+
+    $shadow: 3px 3px rgb(40, 99, 126);
+
+/*
+    @media only screen and (max-width: 420px){
+        nav{left:0!important;};
+    }
+    @media only screen and (min-width: 420px) and (max-width: 450px){
+    }      
+            
+    @media only screen and (min-width: 450px) and (max-width: 480px){
+    }     
+        @media only screen and (min-width: 480px) and (max-width: 520px){
+        }
+        @media only screen and (min-width: 520px) and (max-width: 540px){
+        } 
+        @media only screen and (min-width: 540px) and (max-width: 576px){
+        }
+        @media only screen and (min-width: 576px) and (max-width: 600px){
+        }
+        @media only screen and (min-width: 600px) and (max-width: 650px){
+      
+        }
+        @media only screen and (min-width: 650px) and (max-width: 700px){
+             
+        }
+        @media only screen and (min-width: 700px) and (max-width: 768px){
+        }   
+        @media only screen and (min-width: 768px) and (max-width: 992px){
+        }   
+        @media only screen and (min-width: 992px) and (max-width: 1200px){
+        }   
+        @media only screen and (min-width: 1200px){
+        } */

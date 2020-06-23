@@ -4,6 +4,7 @@ const CleanWebpackPlugin = require("clean-webpack-plugin");
 const BrowserSyncPlugin = require("browser-sync-webpack-plugin");
 const autoprefixer = require("autoprefixer");
 const webpack = require("webpack");
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
     entry: "./src/index.js",
@@ -41,7 +42,11 @@ module.exports = {
             autoprefixer()
             ]
             }
-            })
+            }),
+            new CopyWebpackPlugin([{
+                from: './assets',
+                to: './dest/assets'
+                }]),
     ],
     module: {
         rules: [
