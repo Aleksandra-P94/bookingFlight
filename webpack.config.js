@@ -70,10 +70,13 @@ module.exports = {
             }
         },
         {
-            test: /\.(png|svg|jpg|gif)$/,
+            test: /\.(png|svg|jpe?g|gif)$/i,
             use: {
-            loader: "file-loader"
+            loader: 'file-loader',
+            options: {
+                publicPath: 'built'
             }
+            },
             },
         {
             test: /\.(html)$/,
