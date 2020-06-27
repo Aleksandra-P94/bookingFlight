@@ -7,14 +7,14 @@ const webpack = require("webpack");
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
-    entry: "./src/index.js",
+    entry: ["./src/index.js", "./src/index2.js"],
     output: {
         path: path.resolve(__dirname, "dist"),
-        filename: ".bundle.js"
+        filename: '[name].js'
     },
     devServer: {
         //contentBase: path.join(__dirname, "dist"),
-        port: 9005,
+        port: 9000,
         //watchContentBase: true
     },
     plugins: [
@@ -28,11 +28,10 @@ module.exports = {
             filename: 'index2.html'
         }),
 
-        new CleanWebpackPlugin(),
         new BrowserSyncPlugin({
             host: 'localhost',
             port: 9100,
-            proxy: 'http://localhost:9005'
+            proxy: 'http://localhost:9000'
         }, {
             reload: true
         }),
@@ -43,9 +42,9 @@ module.exports = {
             ]
             }
             }),
-            new CopyWebpackPlugin([{
+        new CopyWebpackPlugin([{
                 from: './assets',
-                to: './dest/assets'
+                to: './assets'
                 }]),
     ],
     module: {
@@ -79,7 +78,8 @@ module.exports = {
             use: {
             loader: 'file-loader',
             options: {
-                publicPath: 'built'
+                //publicPath: 'built'
+                esModule: false,
             }
             },
             },

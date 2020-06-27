@@ -24,7 +24,7 @@
           <a class="nav-link" href="#">Information</a>
           </li>
           <li class="nav-item">
-          <a class="nav-link" href="#">Sign In</a>
+          <a class="nav-link" href="#form">Sign In</a>
           </li>
       </ul> 
   </div>
@@ -113,26 +113,22 @@
         <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
         <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
       </div>
+
+      <!--FORM-->
 <div class="formName" id="formName">
     <div class="login-page">
-        <div class="form">
-          <form class="register-form">
-            <input type="text" placeholder="name"/>
-            <input type="password" placeholder="password"/>
-            <input type="text" placeholder="email address"/>
-            <button>create</button>
-            <p class="message">Already registered? <a href="#">Sign In</a></p>
-          </form>
+        <div class="form" id="form">
           <form class="login-form">
-            <input type="text" placeholder="username"/>
-            <input type="password" placeholder="password"/>
-            <button>login</button>
+            <input type="text" placeholder="login" id="login">
+            <input type="password" placeholder="password" id="password">
+            <input type="email" placeholder="email" id="email">
+            <button>submit</button>
             <p class="message">Not registered? <a href="#">Create an account</a></p>
           </form>
         </div>
       </div>
 </div>
 
-<script type="text/javascript" src="../dist/7d1a589acb64d611d481.bundle.js"></script>
-<script type="text/javascript" src=".bundle.js"></script></body>
+<script type="text/json" src="../data.json"></script>
+<script type="text/javascript" src="main.js"></script></body>
 </html>
