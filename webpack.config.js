@@ -7,7 +7,10 @@ const webpack = require("webpack");
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
-    entry: ["./src/index.js", "./src/index2.js"],
+    entry: {
+        index: "./src/index.js",
+        index2: "./src/index2.js"
+    },
     output: {
         path: path.resolve(__dirname, "dist"),
         filename: '[name].js'
@@ -19,12 +22,14 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: "./src/index.html"
+            template: "./src/index.html",
+            chunks: ['index'],
+            filename: 'index.html'
         }),
         new HtmlWebpackPlugin({
             template: "./src/index2.html",
             inject:true,
-            chunks: ['index'],
+            chunks: ['index2'],
             filename: 'index2.html'
         }),
 
