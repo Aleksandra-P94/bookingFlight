@@ -47,15 +47,15 @@
 </div>        
 <!--First Search-->
 <div class="Matching" id="Matching">
-  <form class="firstSearch">
-  <select class="custom-select custom-select-sm mb-2" id="selectC1" onchange="selectedValue()">
-      <option selected>Origin</option>
+  <form class="firstSearch" action="index2.html">
+  <select class="custom-select custom-select-sm mb-2" id="selectCityOrigin">
+      <option value="">Origin</option>
       <option value="Warsaw">Warsaw</option>
       <option value="Berlin">Berlin</option>
       <option value="Tromso">Tromso</option>
   </select>
-  <select class="custom-select custom-select-sm mb-2" id="selectC2" onchange="selectedValue()">
-      <option selected>Destination</option>
+  <select class="custom-select custom-select-sm mb-2" id="selectCityDestination">
+      <option value="">Destination</option>
       <option value="Warsaw">Warsaw</option>
       <option value="Berlin">Berlin</option>
       <option value="Tromso">Tromso</option>
@@ -73,7 +73,7 @@
 </div>
 
   <button class="classshadow custom-select" id="ShowSearchPassenger" type="button">
-  Passengers...
+  <p id="passengersAll">Passengers...</p>
   </button>
   <div id="passengersAmount">
     <label class="labelName">Adult</label><br>
@@ -85,21 +85,21 @@
 
     <label class="labelName">Child</label><br>
     <div class="cont1">
-        <button class="minus btn btn-primary btn-sm" id="minus" type="button">-</button>
-        <input class="input-group passengers form-control" id= "passengers" value="0" ></input>
-        <button class="plus btn btn-primary btn-sm" id= "plus" type="button">+</button>
+        <button class="minus btn btn-primary btn-sm" id="minus2" type="button">-</button>
+        <input class="input-group passengers form-control" id= "passengers2" value="0" ></input>
+        <button class="plus btn btn-primary btn-sm" id="plus2" type="button">+</button>
     </div>
 
     <label class="labelName">Infant</label><br>
     <div class="cont1">
-        <button class="minus btn btn-primary btn-sm" id="minus" type="button">-</button>
-        <input class="input-group passengers form-control" id= "passengers" value="0" ></input>
-        <button class="plus btn btn-primary btn-sm" id="plus" type="button">+</button>
+        <button class="minus btn btn-primary btn-sm" id="minus3" type="button">-</button>
+        <input class="input-group passengers form-control" id= "passengers3" value="0" ></input>
+        <button class="plus btn btn-primary btn-sm" id="plus3" type="button">+</button>
     </div>
     <button class="sub1 btn btn-primary okButton" type="button" id="okButton" onclick=>ok !</button>
 </div>
 
-<a href="./index2.html" class="sub1 btn btn-primary">Search</a>
+<input type="submit" class="sub1 btn btn-primary" onclick="ddvalue()" value="Search"></input>
 </form>
 </div>
 <!--End class, id Matching-->

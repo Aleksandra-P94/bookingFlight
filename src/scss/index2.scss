@@ -58,6 +58,7 @@ height: max-content;
 }
 #chooseYourFlight{
     margin: 7vw 25vw;
+    
     display: block;
     position: absolute;
     color: $navcolor;
@@ -65,9 +66,21 @@ height: max-content;
             opacity: 0.4;
         }
 }
+#titleChooseYourFlight{
+    font-size: larger;
+    font-style: italic;
+}
+#titleFlight{
+    display: flex;
+font-size: larger;
+font-weight: bold;
+}
+#arrow{
+    margin: 0 20px;
+}
 table{
     text-align: initial;
-    height: 100px;
+    height: 120px;
     display: block;
 position: absolute;
 width: 70vw;

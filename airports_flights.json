@@ -1,73 +1,47 @@
-[
-    {
-      "iata": "UTK",
-      "lon": "169.86667",
-      "iso": "MH",
-      "status": 1,
-      "name": "Utirik Airport",
-      "continent": "OC",
-      "type": "airport",
-      "lat": "11.233333",
-      "size": "small"
+{
+    "Warsaw":[
+      {
+      "departure": "WAW",
+      "arrival": "TRO",
+      "duration": "3:00",
+      "hour" : "14:00 ",
+      "price" : "120 PLN"
     },
-    {
-      "iata": "FIV",
-      "iso": "US",
-      "status": 1,
-      "name": "Five Finger CG Heliport",
-      "continent": "NA",
-      "type": "heliport",
-      "size": null
-    },
-    {
-      "iata": "FAK",
-      "iso": "US",
-      "status": 1,
-      "name": "False Island Seaplane Base",
-      "continent": "NA",
-      "type": "seaplanes",
-      "size": null
-    },
-    {
-      "iata": "BWS",
-      "iso": "US",
-      "status": 0,
-      "name": "Blaine Municipal Airport",
-      "continent": "NA",
-      "type": "closed",
-      "size": null
-    },
-    {
-      "iata": "WKK",
-      "lon": "-158.61111",
-      "iso": "US",
-      "status": 1,
-      "name": "Aleknagik / New Airport",
-      "continent": "NA",
-      "type": "airport",
-      "lat": "59.27778",
-      "size": "medium"
-    },
-    {
-      "iata": "TSS",
-      "iso": "US",
-      "status": 1,
-      "name": "East 34th Street Heliport",
-      "continent": "NA",
-      "type": "heliport",
-      "size": null
-    },
-    {
-      "iata": "FOB",
-      "lon": "-123.79444",
-      "iso": "US",
-      "status": 1,
-      "name": "Fort Bragg Airport",
-      "continent": "NA",
-      "type": "airport",
-      "lat": "39.474445",
-      "size": "small"
+      {
+      "departure": "WAW",
+      "arrival": "BER",
+      "duration": "1:00",
+      "hour" : "4:00 ",
+      "price" : "100 PLN"
     }
-  
-  ]
-  
+  ],
+    
+    "Berlin": [
+    {
+      "departure": "BER",
+      "arrival": "TRO",
+      "duration": "4:00",
+      "hour" : "16:00 ",
+      "price": "110 PLN"
+    },
+    {
+      "departure": "BER",
+      "arrival": "WAW",
+      "duration": "1:00",
+      "hour" : "12:00 ",
+      "price": "60 PLN"
+    }],
+    "Tromso":[
+    {
+      "departure": "TRO",
+      "arrival": "BER",
+      "duration": "4:00",
+      "price": "110 PLN"
+    },
+    {
+      "departure": "TRO",
+      "arrival": "WAW",
+      "duration": "3:00",
+      "price": "120 PLN"
+    }]
+    }
