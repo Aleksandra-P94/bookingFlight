@@ -24,6 +24,13 @@ let defaultNumber2 = document.getElementById('passengers2');
 let switchPlus3 = document.getElementById('plus3');
 let switchMinus3 = document.getElementById('minus3');
 let defaultNumber3 = document.getElementById('passengers3');
+//Dates
+let today = new Date();
+document.getElementById("departure").setAttribute("min", today);
+let day = today.getDay();
+let month =today.getMonth();
+let year= today.getFullYear();
+
 //Adults
 switchPlus.addEventListener('click', function () {
     defaultNumber.value = addOne () +1;
@@ -87,8 +94,13 @@ confirmPassengers.addEventListener('click', function(){
     if (defaultNumber.value>0 || defaultNumber2.value>0 || defaultNumber3.value>0){
         
          passengersAll.innerHTML= defaultNumber.value + " adult " + defaultNumber2.value + " child " + defaultNumber3.value +" infant ";
-   
+         localStorage.setItem('adult', defaultNumber.value);
+         localStorage.setItem('child', defaultNumber2.value);
+         localStorage.setItem('infant', defaultNumber3.value);
      } });
+
+
+
 
 //zapisanie danych origin
 

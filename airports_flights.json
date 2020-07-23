@@ -23,6 +23,7 @@
       "duration": "4:00",
       "hour" : "16:00 ",
       "price": "110 PLN"
+      
     },
     {
       "departure": "BER",
@@ -36,12 +37,14 @@
       "departure": "TRO",
       "arrival": "BER",
       "duration": "4:00",
+      "hour" : "11:00 ",
       "price": "110 PLN"
     },
     {
       "departure": "TRO",
       "arrival": "WAW",
       "duration": "3:00",
+      "hour" : "13:00 ",
       "price": "120 PLN"
     }]
     }

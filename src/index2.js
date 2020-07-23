@@ -10,6 +10,8 @@ document.getElementById("from").innerHTML=localStorage.getItem("origin");
 document.getElementById("to").innerHTML=localStorage.getItem("destination");
 
 //flights
+
+
 let theDeparture =[]; 
 let theArrival =[]; 
 let theDuration =[]; 
@@ -20,67 +22,155 @@ function checkFlight(){
     let originV = localStorage.getItem("origin");
     let destinationV = localStorage.getItem("destination");
     console.log(originV, destinationV);
+    
     if (originV == "Berlin"){
-        
-    }
-
-};
-checkFlight();
-
-fetch("/airports_flights.json")
+        fetch("/airports_flights.json")
     .then(function(resp){
         return resp.json();
     })
     .then(function (data) {
-            
-        console.log(data.Berlin);
 
-        data.Berlin.forEach(function (thePrice) {
-            console.log(thePrice.price);   
+console.log(data.Berlin);
+            let json = data.Berlin;
+            console.log(json);
+            let table = document.getElementById('tbody');
 
-            
-                document.getElementById("price").innerHTML = `<tr> ${thePrice.price} </tr>`;
-            }) ;
-        data.Berlin.forEach(function (theArrival) {
-            console.log(theArrival.arrival)
-            for (var i=0; i < data.length; i++){
-                document.getElementsByClassName("arrival").innerHTML += `<tr> ${theArrival.arrival} </tr>`;
-            }});
-        data.Berlin.forEach(function (theDuration) {    
-             console.log(theDuration.duration)
-             for (var i=0; i < data.length; i++){
-                document.getElementsByClassName("duration").innerHTML += `<tr> ${theDuration.duration} </tr>`;
-            }});
-        data.Berlin.forEach(function (theHour) {     
-             console.log(theHour.hour)
-             for (var i=0; i < data.length; i++){
-                document.getElementsByClassName("hour").innerHTML += `<tr> ${theHour.hour} </tr>`;
-            }});
-        data.Berlin.forEach(function (theDeparture) {
-             console.log(theDeparture.departure) 
-             for (var i=0; i < data.length; i++){
-                document.getElementsByClassName("departure").innerHTML += `<tr> ${theDeparture.departure} </tr>`;
-            }});
-
-             //document.getElementById("price").innerHTML += `<tr> ${thePrice.price} </tr>`;
-     
-    
-
-
-
-
-//fetch("/airports_flights.json")
-    //.then(function(resp){
-   //     return resp.json();
-   // })
-  //  .then(function (data) {
-            
-   //     console.log(data);
-    //     data.forEach(function (thePrice) {
-    //         console.log(thePrice.price);
-    //         document.getElementById("price").innerHTML += `<tr> ${thePrice.price} </tr>`;
-    // }
-    //)
-
-//})
+            json.forEach(function (row) { 
+                let tr = document.createElement('tr'); 
+                tr.setAttribute('type', 'button');
+                tr.setAttribute('class', 'trBody');
+                tr.innerHTML += '<td>'+row.departure+'</td>' + '<td>'+ row.arrival +'</td>'+ '<td>'+ row.duration + '</td>' +'<td>' +row.hour + '</td>' + '<td>' + row.price + '</td>';
+                table.append(tr);
+                tr.addEventListener('click', function(tr) {
+                    console.log(row);
+                    localStorage.setItem('duration', row.duration);
+                    localStorage.setItem('hour', row.hour);
+                    localStorage.setItem('price', row.price);
+                    //Select Seats   
+                    let nav1 = document.getElementById('nav1');
+                    let nav2 = document.getElementById('nav2');
+                    let nav3 = document.getElementById('nav3');
+                    document.querySelector('tbody').addEventListener('click', function(event) {
+                        if(event.target.tagName.toLowerCase() === 'tr'){
+                        nav1.className += "pnav1 nav-link disabled";
+                        nav2.className += "pnav1 nav-link";
+                        document.getElementById('chooseYourFlight').style.display = "none";
+                        document.getElementById('selectSeats').style.visibility = "visible";
+                        }
+                    }, false);
+                })
+            })
         })
+    } else if (originV == "Warsaw"){
+        fetch("/airports_flights.json")
+    .then(function(resp){
+        return resp.json();
+    })
+    .then(function (data) {
+
+console.log(data.Warsaw);
+            let json2 = data.Warsaw;
+            console.log(json2);
+            let table = document.getElementById('tbody');
+
+            json2.forEach(function (row) { 
+                let tr = document.createElement('tr'); 
+                tr.setAttribute('type', 'button');
+                tr.setAttribute('class', 'trBody');
+                tr.innerHTML += '<td>'+row.departure+'</td>' + '<td>'+ row.arrival +'</td>'+ '<td>'+ row.duration + '</td>' +'<td>' +row.hour + '</td>' + '<td>' + row.price + '</td>';
+                table.append(tr);
+                //Select Seats   
+                tr.addEventListener('click', function(tr) {
+                    console.log(row);
+                    localStorage.setItem('duration', row.duration);
+                    localStorage.setItem('hour', row.hour);
+                    localStorage.setItem('price', row.price);
+                    let nav1 = document.getElementById('nav1');
+                    let nav2 = document.getElementById('nav2');
+                    let nav3 = document.getElementById('nav3');
+                    document.querySelector('tbody').addEventListener('click', function(event) {
+                        if(event.target.tagName.toLowerCase() === 'tr'){
+                        nav1.className += "pnav1 nav-link disabled";
+                        nav2.className += "pnav1 nav-link";
+                        document.getElementById('chooseYourFlight').style.display = "none";
+                        document.getElementById('selectSeats').style.visibility = "visible";
+                    }
+                }, false);
+            })
+        })
+    })
+    }else if (originV == "Tromso"){
+    fetch("/airports_flights.json")
+.then(function(resp){
+    return resp.json();
+})
+.then(function (data) {
+    console.log(data.Tromso);
+    let json3 = data.Tromso;
+    console.log(json3);
+
+    let table = document.getElementById('tbody');
+
+    json3.forEach(function (row) { 
+        let tr = document.createElement('tr'); 
+        tr.setAttribute('type', 'button');
+        tr.setAttribute('class', 'trBody');
+        tr.innerHTML += '<td>'+row.departure+'</td>' + '<td>'+ row.arrival +'</td>'+ '<td>'+ row.duration + '</td>' +'<td>' +row.hour + '</td>' + '<td>' + row.price + '</td>';
+        table.append(tr);
+        //Select Seats   
+        tr.addEventListener('click', function(tr) {
+            console.log(row);
+            localStorage.setItem('duration', row.duration);
+                    localStorage.setItem('hour', row.hour);
+                    localStorage.setItem('price', row.price);
+            let nav1 = document.getElementById('nav1');
+            let nav2 = document.getElementById('nav2');
+            let nav3 = document.getElementById('nav3');
+            document.querySelector('tbody').addEventListener('click', function(event) {
+                if(event.target.tagName.toLowerCase() === 'tr'){
+                nav1.className += "pnav1 nav-link disabled";
+                nav2.className += "pnav1 nav-link";
+                document.getElementById('chooseYourFlight').style.display = "none";
+                document.getElementById('selectSeats').style.visibility = "visible";
+                }
+            }, false);
+        }, false);
+    })
+})
+};
+
+} 
+checkFlight();
+
+let acceptSeats = document.getElementById('acceptSeats');
+
+
+acceptSeats.addEventListener('click', function(){
+    if (document.querySelectorAll('li.seat:checked')){
+        let selected = document.querySelectorAll('li.seat:checked');
+       
+       
+        selected.forEach(function (selected) {
+            localStorage.setItem('seats', selected.textContent)
+    })}
+})
+
+//Pobranie danych do localstorage
+// let origin = document.getElementById("selectCityOrigin");
+// let selectOrigin = origin.options[origin.selectedIndex];
+// let lastSelectedOrigin = localStorage.getItem('origin');
+
+// if(lastSelectedOrigin){
+//     origin.value = lastSelectedOrigin;
+// }
+// origin.onchange = function(){
+//     lastSelectedOrigin = origin.options[origin.selectedIndex].value;
+//     console.log(lastSelectedOrigin);
+//     localStorage.setItem('origin', lastSelectedOrigin)
+
+
+//Select Seats    
+
+
+
+
