@@ -1,5 +1,5 @@
 {
-    "Warsaw":[
+    "WarsawTromso":[
       {
       "departure": "WAW",
       "arrival": "TRO",
@@ -9,14 +9,33 @@
     },
       {
       "departure": "WAW",
-      "arrival": "BER",
-      "duration": "1:00",
-      "hour" : "4:00 ",
+      "arrival": "TRO",
+      "duration": "3:20",
+      "hour" : "22:00 ",
       "price" : "100 PLN"
     }
+    
+  ],
+  "WarsawBerlin": [
+    {
+      "departure": "WAW",
+      "arrival": "BER",
+      "duration": "0:30",
+      "hour" : "12:00 ",
+      "price" : "120 PLN"
+    },
+    {
+      "departure": "WAW",
+      "arrival": "BER",
+      "duration": "0:40",
+      "hour" : "11:00 ",
+      "price" : "110 PLN"
+    }
+  
+  
   ],
     
-    "Berlin": [
+    "BerlinTromso": [
     {
       "departure": "BER",
       "arrival": "TRO",
@@ -27,15 +46,32 @@
     },
     {
       "departure": "BER",
-      "arrival": "WAW",
-      "duration": "1:00",
+      "arrival": "TRO",
+      "duration": "3:30",
       "hour" : "12:00 ",
-      "price": "60 PLN"
+      "price": "150 PLN"
     }],
-    "Tromso":[
+    "BerlinWarsaw": [
+      {
+        "departure": "BER",
+        "arrival": "WAR",
+        "duration": "0:40",
+        "hour" : "16:00 ",
+        "price": "60 PLN"
+        
+      },
+      {
+        "departure": "BER",
+        "arrival": "WAW",
+        "duration": "1:00",
+        "hour" : "12:00 ",
+        "price": "50 PLN"
+      }],
+
+    "TromsoWarsaw":[
     {
       "departure": "TRO",
-      "arrival": "BER",
+      "arrival": "WAR",
       "duration": "4:00",
       "hour" : "11:00 ",
       "price": "110 PLN"
@@ -46,5 +82,20 @@
       "duration": "3:00",
       "hour" : "13:00 ",
       "price": "120 PLN"
-    }]
+    }],
+    "TromsoBerlin":[
+      {
+        "departure": "TRO",
+        "arrival": "BER",
+        "duration": "4:00",
+        "hour" : "11:00 ",
+        "price": "130 PLN"
+      },
+      {
+        "departure": "TRO",
+        "arrival": "BER",
+        "duration": "4:20",
+        "hour" : "13:00 ",
+        "price": "100 PLN"
+      }]
     }

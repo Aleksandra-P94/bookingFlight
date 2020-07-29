@@ -24,6 +24,7 @@ let defaultNumber2 = document.getElementById('passengers2');
 let switchPlus3 = document.getElementById('plus3');
 let switchMinus3 = document.getElementById('minus3');
 let defaultNumber3 = document.getElementById('passengers3');
+
 //Dates
 let today = new Date();
 document.getElementById("departure").setAttribute("min", today);
@@ -89,6 +90,7 @@ let confirmPassengers=document.getElementById('okButton');
 
 
 confirmPassengers.addEventListener('click', function(){
+
     document.getElementById('passengersAmount').style.display = "none";
     let passengersAll = document.getElementById('passengersAll');
     if (defaultNumber.value>0 || defaultNumber2.value>0 || defaultNumber3.value>0){
@@ -130,6 +132,8 @@ destination.onchange = function(){
     console.log(lastSelectedDestination);
     localStorage.setItem('destination', lastSelectedDestination)
 };
+
+//zapisanie dat
 
 
 //FORM

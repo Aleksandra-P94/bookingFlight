@@ -416,7 +416,62 @@ visibility: hidden;
         display: block;
         padding: 0;
         opacity: 0.9;
+    };
+    #total{
+        background-color: $secondBgColor;
+        display: inline-block;
+padding: 10px;
+height: 35vw;
+width: 72vw;
+font-size: medium;
+margin-top: 6vw;
+margin-left: 23vw;
+visibility: hidden;
     }
+
+    .resume{
+        opacity: 0.8;
+
+color: black;
+    }
+#resumeTitle{
+    font-size: x-large;
+    color: gray;
+     
+}
+#luggage{
+width: 40%;
+.label{
+    width: 19vw;
+    
+}
+
+}
+#resumeData{
+    display: flex;
+justify-content: space-between;
+margin-bottom: 20px;
+}
+.totalList{
+    width: 40%;
+    display: inline-block!important;
+    border-radius: 25px!important;
+}
+.checkId{
+    border-radius: 13.25px!important;
+    margin-top: 15px
+
+}
+#totalPrice{
+    font-size: larger;
+background-color: floralwhite;
+opacity: 0.8;
+padding: 0;
+margin: 0;
+width: 28vw;
+margin-left: 20vw;
+text-align: center;
+}
 /*
     @media only screen and (max-width: 420px){
         nav{left:0!important;};

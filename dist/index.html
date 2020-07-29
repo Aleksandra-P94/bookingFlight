@@ -63,7 +63,7 @@
       <div class="departure">    <div class="departureLabel input-group-prepend">
           <label class="departureLabel input-group-text" for="inputGroupSelect01">Departure</label>
       </div>
-  <input type="date" id="departure" name="departure">
+  <input type="date" id="departure" name="departure" min="new Date()">
       </div>
       <div class="return">
           <div class="returnLabel input-group-prepend">
@@ -99,7 +99,7 @@
     <button class="sub1 btn btn-primary okButton" type="button" id="okButton" onclick=>ok !</button>
 </div>
 
-<input type="submit" class="sub1 btn btn-primary" onclick="ddvalue()" value="Search"></input>
+<input type="submit" class="sub1 btn btn-primary" value="Search" id="search"></input>
 </form>
 </div>
 <!--End class, id Matching-->
