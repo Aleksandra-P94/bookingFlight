@@ -10,6 +10,7 @@ ShowSearchPassenger.addEventListener('click', function () {
 
     if(x.style.display === "none"){
         x.style.display = "block";
+        
     } else {
         x.style.display = "none";
     }
@@ -99,10 +100,11 @@ confirmPassengers.addEventListener('click', function(){
          localStorage.setItem('adult', defaultNumber.value);
          localStorage.setItem('child', defaultNumber2.value);
          localStorage.setItem('infant', defaultNumber3.value);
+         
+        
      } });
 
-
-
+     
 
 //zapisanie danych origin
 
@@ -135,7 +137,18 @@ destination.onchange = function(){
 
 //zapisanie dat
 
-
+let dateDeparture = document.getElementById("departure");
+console.log(dateDeparture);
+dateDeparture.onchange = function(){
+    console.log(dateDeparture.value);
+    localStorage.setItem('dateDeparture', dateDeparture.value)
+};
+let dateReturn = document.getElementById("return");
+console.log(dateReturn);
+dateReturn.onchange = function(){
+    console.log(dateReturn.value);
+    localStorage.setItem('dateReturn', dateReturn.value)
+};
 //FORM
 
 
@@ -163,5 +176,4 @@ inputPassword.addEventListener("input", function (event) {
 });
     let data = '{"login": "Aleksandra", "password": "123qwe", "email": "aleksandra@gmail.com" }';
     let mydata = JSON.parse(data);
-
 

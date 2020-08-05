@@ -47,9 +47,9 @@
 </div>        
 <!--First Search-->
 <div class="Matching" id="Matching">
-  <form class="firstSearch" action="index2.html">
-  <select class="custom-select custom-select-sm mb-2" id="selectCityOrigin">
-      <option value="">Origin</option>
+  <form class="firstSearch" action="index2.html" method="post" onsubmit="return checkforblank()">
+  <select class="custom-select custom-select-sm mb-2" id="selectCityOrigin" onchange="checkforblank()">
+      <option value="Origin">Origin</option>
       <option value="Warsaw">Warsaw</option>
       <option value="Berlin">Berlin</option>
       <option value="Tromso">Tromso</option>

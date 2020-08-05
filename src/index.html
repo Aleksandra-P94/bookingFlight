@@ -47,14 +47,14 @@
 </div>        
 <!--First Search-->
 <div class="Matching" id="Matching">
-  <form class="firstSearch" action="index2.html">
-  <select class="custom-select custom-select-sm mb-2" id="selectCityOrigin">
+  <form class="firstSearch" action="index2.html" onsubmit="return checkforblank()" >
+  <select class="custom-select custom-select-sm mb-2" id="selectCityOrigin" required>
       <option value="">Origin</option>
       <option value="Warsaw">Warsaw</option>
       <option value="Berlin">Berlin</option>
       <option value="Tromso">Tromso</option>
   </select>
-  <select class="custom-select custom-select-sm mb-2" id="selectCityDestination">
+  <select class="custom-select custom-select-sm mb-2" id="selectCityDestination" required> 
       <option value="">Destination</option>
       <option value="Warsaw">Warsaw</option>
       <option value="Berlin">Berlin</option>
@@ -63,23 +63,23 @@
       <div class="departure">    <div class="departureLabel input-group-prepend">
           <label class="departureLabel input-group-text" for="inputGroupSelect01">Departure</label>
       </div>
-  <input type="date" id="departure" name="departure" min="new Date()">
+  <input type="date" id="departure" name="departure" min="new Date()" required>
       </div>
       <div class="return">
           <div class="returnLabel input-group-prepend">
               <label class="returnLabel input-group-text" for="inputGroupSelect01">Return</label>
           </div>
-  <input type="date" id="return" name="return">
+  <input type="date" id="return" name="return" required>
 </div>
 
-  <button class="classshadow custom-select" id="ShowSearchPassenger" type="button">
+  <button class="classshadow custom-select" id="ShowSearchPassenger" type="button" >
   <p id="passengersAll">Passengers...</p>
   </button>
-  <div id="passengersAmount">
-    <label class="labelName">Adult</label><br>
-    <div class="cont1">
+  <div id="passengersAmount" >
+    <label class="labelName" >Adult</label><br>
+    <div class="cont1" >
         <button class="minus btn btn-primary btn-sm" id="minus" type="button">-</button>
-        <input class="input-group passengers form-control" id= "passengers" value="0" max="9"></input>
+        <input class="input-group passengers form-control" id= "passengers" value="0" max="9" required></input>
         <button class="plus btn btn-primary btn-sm" id="plus" type="button">+</button>
     </div>
 

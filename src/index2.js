@@ -244,6 +244,7 @@ console.log(data.WarsawBerlin);
             let nav3 = document.getElementById('nav3');
             document.querySelector('tbody').addEventListener('click', function(event) {
                 if(event.target.tagName.toLowerCase() === 'tr'){
+                
                 nav1.className += "pnav1 nav-link disabled";
                 nav2.className += "pnav1 nav-link";
                 document.getElementById('chooseYourFlight').style.display = "none";
@@ -257,7 +258,20 @@ console.log(data.WarsawBerlin);
 checkFlight();
 
 let acceptSeats = document.getElementById('acceptSeats');
-
+let seats = document.querySelectorAll(".checkboxSeat");
+let adultamount = parseInt(localStorage.getItem("adult"));
+         let childamount = parseInt(localStorage.getItem("child"));
+         let infantamount = parseInt(localStorage.getItem("infant"));
+         let max=   adultamount + childamount + infantamount;
+for (let i = 0; i < seats.length; i++)
+    seats[i].onclick = selectiveCheck;
+ 
+function selectiveCheck (event) {
+    let checkedChecks = document.querySelectorAll(".checkboxSeat:checked");
+    if (checkedChecks.length >= max + 1) {
+        return false;
+    }
+}
 
 acceptSeats.addEventListener('click', function(){
     if (document.querySelectorAll('li.seat:checked')){
@@ -276,6 +290,8 @@ acceptSeats.addEventListener('click', function(){
                 document.getElementById('total').style.visibility = "visible";
                 document.getElementById("departureCounry").innerHTML= "Departure: " + localStorage.getItem("origin");
                 document.getElementById("arrivalCountry").innerHTML= "Arrival: " + localStorage.getItem("destination");
+                document.getElementById("datesconfirm").innerHTML= "Departure Date: " + localStorage.getItem("dateDeparture") + "<br>" +" Arrival Date: " + localStorage.getItem("dateReturn");
+                
                 document.getElementById("durationConfirm").innerHTML= "Flight duration: " + localStorage.getItem("duration");
                 document.getElementById("hourConfirm").innerHTML= "Departure hour: " + localStorage.getItem("hour");
                 document.getElementById("passengersConfirm").innerHTML= "Adult: " + localStorage.getItem("adult") + " Child: " + localStorage.getItem("child") + " Infant: " + localStorage.getItem("infant");
@@ -288,23 +304,6 @@ acceptSeats.addEventListener('click', function(){
 
     }
 })
-
-//Pobranie danych do localstorage
-// let origin = document.getElementById("selectCityOrigin");
-// let selectOrigin = origin.options[origin.selectedIndex];
-// let lastSelectedOrigin = localStorage.getItem('origin');
-
-// if(lastSelectedOrigin){
-//     origin.value = lastSelectedOrigin;
-// }
-// origin.onchange = function(){
-//     lastSelectedOrigin = origin.options[origin.selectedIndex].value;
-//     console.log(lastSelectedOrigin);
-//     localStorage.setItem('origin', lastSelectedOrigin)
-
-
-//Select Seats    
-
 
 
 

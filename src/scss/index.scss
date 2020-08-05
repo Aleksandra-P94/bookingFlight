@@ -112,7 +112,12 @@ background-color: $bodycolor!important;
         flex-direction: column;
         margin: 20px 30px;
         }
-
+        .error {border: 1px red solid;};
+        :required:focus {
+            box-shadow: 0  0 6px rgba(255,0,0,0.5);
+            border: 1px red solid;
+            outline: 0;
+          }
         .sub1{
             display: block;
             padding: 0;
@@ -308,6 +313,14 @@ background-color: $bodycolor!important;
                 .wordCarousel {
                     font-size: 16px;
             }
+        #Matching{
+            display: block;
+            position: inherit;
+            margin: 10px;
+        }
+        #passengersAmount{
+            display: contents;
+        }
         }
         
         @media only screen and (min-width: 420px) and (max-width: 450px){
@@ -319,8 +332,13 @@ background-color: $bodycolor!important;
                 .wordCarousel {
                         font-size: 17px;
                                 }
+                #Matching{
+                    display: block;
+                    position: inherit;
+                    margin: 10px;
+                }                
             }
-                
+            
         @media only screen and (min-width: 450px) and (max-width: 480px){
                 .caption{
                         top: 11%;
@@ -330,7 +348,18 @@ background-color: $bodycolor!important;
                 .wordCarousel {
                         font-size: 17px;
                                 }
+                #Matching{
+                display: block;
+                position: inherit;
+                margin-right: 47vw;
+                padding: 0;
+            }  
+               .firstSearch {
+                margin: 10px
+            }           
             }
+            
+            
             @media only screen and (min-width: 480px) and (max-width: 520px){
                 .caption{
                         top: 12%;
@@ -340,7 +369,24 @@ background-color: $bodycolor!important;
                 .wordCarousel {
                         font-size: 17px;
                                 }
+                #Matching{
+                display: block;
+                position: inherit;
+                margin-right: 49vw;
+                padding: 0;
             }
+            .firstSearch {
+                margin: 10px
+            }   
+            .passengersAmount{
+                margin: 51vw 82vw;
+                height: 47vw;
+                right: 20px;
+        
+
+            }             
+            }
+            
             @media only screen and (min-width: 520px) and (max-width: 540px){
                 .caption{
                         top: 13%;
@@ -350,7 +396,17 @@ background-color: $bodycolor!important;
                 .wordCarousel {
                         font-size: 19px;
                                 }
+                #Matching{
+                display: block;
+                position: inherit;
+                margin-right: 49vw;
+                padding: 0;
+            }
+            .firstSearch {
+                margin: 10px
+            }                
             }   
+            
             @media only screen and (min-width: 540px) and (max-width: 576px){
                 .caption{
                         top: 14%;
@@ -360,7 +416,17 @@ background-color: $bodycolor!important;
                 .wordCarousel {
                         font-size: 19px;
                                 }
-            }   
+                #Matching{
+                display: block;
+                position: inherit;
+                margin-right: 52vw;
+                padding: 0;
+            }
+            .firstSearch {
+                margin: 10px
+            }                 
+            }  
+            
             @media only screen and (min-width: 576px) and (max-width: 600px){
                 .caption{
                         top: 15%;
@@ -370,7 +436,17 @@ background-color: $bodycolor!important;
                 .wordCarousel {
                         font-size: 19px;
                                 }
+                #Matching{
+                display: block;
+                position: inherit;
+                margin-right: 52vw;
+                padding: 0;
+            }
+            .firstSearch {
+                margin: 10px
+            }                
             }   
+            
             @media only screen and (min-width: 600px) and (max-width: 650px){
                 .caption{
                         top: 16%;
@@ -380,8 +456,17 @@ background-color: $bodycolor!important;
                 .wordCarousel {
                         font-size: 19px;
                                 }
+                #Matching{
+                display: block;
+                position: inherit;
+                margin-right: 54vw;
+                padding: 0;
+            }
+            .firstSearch {
+                margin: 10px
+            }                
             }   
-        
+            
             @media only screen and (min-width: 650px) and (max-width: 700px){
                 .caption{
                         top: 17%;
@@ -391,8 +476,17 @@ background-color: $bodycolor!important;
                 .wordCarousel {
                         font-size: 20px;
                                 }
+                #Matching{
+                margin-top: -63px;
+                margin-right: 60vw;
+                padding: 0;
+            }
+            .firstSearch {
+                margin: 5px
+            } 
+
             }   
-        
+            
             @media only screen and (min-width: 700px) and (max-width: 768px){
                 .caption{
                         top: 18%;
@@ -402,6 +496,12 @@ background-color: $bodycolor!important;
                 .wordCarousel {
                         font-size: 25px;
                                 }
+                #Matching{
+                    margin-top: -42px;
+                }
+                .firstSearch {
+                margin: 7px
+                }                        
             }   
             @media only screen and (min-width: 768px) and (max-width: 992px){
                 .caption{
@@ -412,6 +512,10 @@ background-color: $bodycolor!important;
                 .wordCarousel {
                         font-size: 30px;
                                 }
+                #Matching{
+                    margin-top: -42px;
+                }
+                               
             }   
             @media only screen and (min-width: 992px) and (max-width: 1200px){
                 .caption{
